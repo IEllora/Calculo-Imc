@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+    function enter() {
+        document.write("<br><br>");
+    }
+    function screen(x) {
+        document.write(x);
+        enter();
+    }
+   function calculaImc (altura, peso) {
+     return peso / (altura * altura);
+   }
+   alert("Olá! Este é um programa simplificado para calcular seu índice de massa corporal. Clique em OK para prosseguirmos!");
+   var nome = prompt("Agora, informe seu nome:");
+   var alturaInformada = prompt(nome + ", informe sua altura:");
+   var pesoInformado = prompt(nome + ", e por fim, seu peso:");
+
+   var imc = calculaImc(alturaInformada, pesoInformado);
+   screen(nome + ", o resultado do cálculo do seu IMC é " + Math.round(imc) + ".");
+
+    if(imc < 18.5) {
+        screen("Cuidado! Segundo a Organização Mundial da Saúde, seu peso está abaixo do recomendado!");
+    }
+    if(imc >= 18.5 && imc <=24.9 ) {
+        screen("Parabéns, você está dentro do recomendado pela Organização Mundial da Saúde!");
+        }
+    if( imc >=25 && imc <= 29.9) {
+        screen("Cuidado! Segundo a Organização Mundial da Saúde, é possível que você esteja com sobrepeso!");
+    }
+    if(imc > 30) {
+        screen("Cuidado! Segundo a Organização Mundial da Saúde, é possível que você esteja com obesidade!");
+    }
+</script>
